@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_qty"
+            android:padding="@dimen/ten_dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/et_quantity"
+            android:inputType="number"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:hint="@string/quantity"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_dark"
+            android:layout_marginTop="@dimen/twenty_dp"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:minHeight="@dimen/fourty_dp"
+            >
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_weight="0.5"
+                android:textSize="15dp"
+                android:minHeight="@dimen/thirty_five_dp"
+                android:padding="@dimen/ten_dp"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:gravity="center"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_dark"></View>
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textSize="15dp"
+                android:layout_weight="0.5"
+                android:minHeight="@dimen/thirty_five_dp"
+                android:padding="@dimen/ten_dp"
+                android:textColor="@color/blue"
+                android:textAllCaps="true"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

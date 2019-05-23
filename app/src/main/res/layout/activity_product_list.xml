@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Products.Activity.ProductListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+       <include layout="@layout/custom_cat_toolbar"
+
+           ></include>
+        <LinearLayout
+            android:id="@+id/ll_filter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            >
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.37">
+            <ImageView
+                android:id="@+id/iv_view_by_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/list"
+                android:padding="@dimen/ten_dp"
+                />
+            <ImageView
+                android:id="@+id/iv_view_by_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@drawable/grid"
+                android:padding="@dimen/ten_dp"
+                />
+        </RelativeLayout>
+
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                ></View>
+            <RelativeLayout
+                android:id="@+id/rl_sort_by"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/sort"
+                    android:padding="@dimen/ten_dp"
+                    android:layout_toLeftOf="@+id/tv_sort"
+                    />
+                <TextView
+                    android:id="@+id/tv_sort"
+                    android:text="@string/sort"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                ></View>
+            <RelativeLayout
+                android:id="@+id/rl_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/filter"
+                    android:padding="@dimen/ten_dp"
+                    android:layout_toLeftOf="@+id/tv_filter"
+                    />
+                <TextView
+                    android:id="@+id/tv_filter"
+                    android:text="@string/filter"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+            </RelativeLayout>
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                ></View>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray"
+            ></View>
+        <GridView
+            android:id="@+id/gv_product_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"
+            android:background="@color/gray"
+            android:numColumns="2"
+            ></GridView>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/rv_products"
+            android:layout_height="match_parent"
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+            ></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+<ProgressBar
+    android:id="@+id/p_bar"
+    android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/sort_by"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/thirty_dp"
+        android:src="@drawable/ic_sort"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:id="@+id/tv_no_products_available"
+        android:text="@string/currently_no_product_available"
+        />
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Products.Activity.ProductFilterActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/ll_filter_buttons"
+        >
+        <include
+            layout="@layout/custom_cat_toolbar"></include>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:textColor="@color/blue"
+        android:padding="@dimen/ten_dp"
+        android:textSize="16dp"
+
+
+        />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray_dark"
+            android:layout_marginTop="@dimen/five_dp"
+            ></View>
+
+    <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+        android:id="@+id/seekBar_price2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bar_color="@color/blue"
+        android:layout_marginTop="10dp"
+        app:bar_highlight_color="@color/colorPrimaryDark"
+        app:corner_radius="8"
+        app:data_type="_integer"
+        app:gap="2"
+        app:left_thumb_color="@color/blue"
+        app:left_thumb_color_pressed="@color/black"
+        app:right_thumb_color="@color/blue_light"
+        app:right_thumb_color_pressed="@color/blue" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/textMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+        <ExpandableListView
+            android:id="@+id/filter_expandable"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:groupIndicator="@null"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_filter_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/btn_clear_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.5"
+            android:layout_margin="@dimen/ten_dp"
+            android:background="@drawable/button_shape_blue"
+            android:textColor="@color/white"
+            android:text="@string/clear_filter"
+            />
+        <Button
+            android:id="@+id/btn_apply_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.5"
+            android:layout_margin="@dimen/ten_dp"
+            android:background="@drawable/button_shape_blue"
+            android:textColor="@color/white"
+            android:text="@string/apply_filter"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35sp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:text="@string/cart"
+        android:textColor="@color/black"
+        android:padding="@dimen/ten_dp"
+        />
+    <TextView
+        android:id="@+id/tv_wishlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35sp"
+        android:text="@string/my_wishlist"
+        android:textColor="@color/black"
+        android:padding="@dimen/ten_dp"
+        />
+    <TextView
+        android:id="@+id/tv_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35sp"
+        android:text="@string/orders"
+        android:textColor="@color/black"
+        android:padding="@dimen/ten_dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_my_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35sp"
+        android:text="@string/my_account"
+        android:textColor="@color/black"
+        android:padding="@dimen/ten_dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:background="@color/black"/>
+    <TextView
+        android:id="@+id/tv_change_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35sp"
+        android:text="@string/change_language"
+        android:textColor="@color/black"
+        android:padding="@dimen/ten_dp"
+        />
+    <TextView
+        android:id="@+id/tv_faq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35sp"
+        android:text="@string/faq"
+        android:textColor="@color/black"
+        android:padding="@dimen/ten_dp"
+        />
+    <TextView
+        android:id="@+id/tv_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35sp"
+        android:text="@string/contact_us"
+        android:textColor="@color/black"
+        android:padding="@dimen/ten_dp"
+        />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape_gray"
+        android:layout_margin="@dimen/ten_dp"
+        android:text="@string/logout"
+        android:padding="@dimen/ten_dp"
+        android:textAllCaps="true"
+
+        />
+</LinearLayout>
+</RelativeLayout>

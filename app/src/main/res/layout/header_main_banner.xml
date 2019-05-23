@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_height="160dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_banner"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_fifity_dp">
+        </android.support.v4.view.ViewPager>
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:padding="10dip"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            app:ci_animator="@animator/indicator_animator"
+            app:ci_animator_reverse="@animator/indicator_animator_reverse"
+            app:ci_drawable="@drawable/black_radius"
+            app:ci_drawable_unselected="@drawable/white_radius"
+            app:ci_height="7dp"
+            app:ci_width="7dp"
+
+
+            />
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/five_dp"
+        android:text="@string/categories"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="15sp"
+
+        android:textColor="@color/black"
+        android:gravity="center"
+        />
+</LinearLayout>

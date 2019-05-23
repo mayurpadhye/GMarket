@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Orders.Activities.OrderSuccessActivity">
+    <include layout="@layout/custom_cat_toolbar"
+        android:id="@+id/custom_cat_tool"
+        ></include>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="114dp"
+        android:text="@string/order_failed"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:padding="@dimen/ten_dp" />
+
+    <ImageView
+        android:id="@+id/iv_order_placed"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="186dp"
+        android:src="@drawable/fail" />
+
+    <TextView
+        android:id="@+id/tv_view_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="145dp"
+
+        android:gravity="center"
+        android:padding="@dimen/ten_dp"
+        android:text="@string/transaction_failed"
+        android:textColor="@color/blue" />
+
+    <Button
+        android:id="@+id/btn_continue_shopping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:minHeight="@dimen/fourty_dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:text="@string/continue_shopping"
+        />
+</RelativeLayout>

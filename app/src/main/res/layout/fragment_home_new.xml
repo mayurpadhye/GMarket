@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:background="@color/home_background_color"
+    android:orientation="vertical"
+    tools:context=".Home.Fragments.HomeFragmentNew">
+
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            shimmer:duration="800">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:siRadius="5dp"
+            app:siBorderWidth="0dp"
+            android:layout_margin="@dimen/ten_dp"
+            android:id="@+id/iv_banner_image"
+            android:scaleType="fitCenter"
+            android:background="@color/background"
+            app:siSquare="false"/>
+        <include layout="@layout/category_place_holder"></include>
+        <include layout="@layout/category_place_holder"></include>
+        <include layout="@layout/category_place_holder"></include>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+      >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+
+               >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/main_banner"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/one_fifity_dp"></android.support.v4.view.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="bottom"
+                    android:padding="10dip"
+                    android:visibility="gone"
+                    app:ci_animator="@animator/indicator_animator"
+                    app:ci_animator_reverse="@animator/indicator_animator_reverse"
+                    app:ci_drawable="@drawable/black_radius"
+                    app:ci_drawable_unselected="@drawable/white_radius"
+                    app:ci_height="7dp"
+                    app:ci_width="7dp"
+
+
+                    />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                         android:layout_margin="@dimen/five_dp"
+                        android:text="@string/categories"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:padding="@dimen/ten_dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+
+                        android:nestedScrollingEnabled="false">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+app:cardBackgroundColor="@color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/five_dp"
+                            android:text="@string/featured_brands"
+                            android:textAllCaps="true"
+                            android:padding="@dimen/ten_dp"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_featured_product"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                           />
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/featured_brand_slider"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="8dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    app:cardCornerRadius="6dp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/best_seller"
+                    android:textAllCaps="true"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_best_seller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/five_dp" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/most_viewd_products_for_men"
+                            android:textAllCaps="true"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_most_viewed_men"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/five_dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/most_viewd_products_for_women"
+                            android:textAllCaps="true"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_most_viewed_women"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/five_dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/most_viewed_products_for_electronics"
+                            android:textAllCaps="true"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_most_viewed_electronics"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/five_dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/five_dp"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/latest_products_men"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/btn_show_all_latest_products_men"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:minHeight="30dp"
+                            android:visibility="gone"
+                            android:padding="@dimen/five_dp"
+                            android:text="@string/plus"
+                            android:textSize="11dp"
+                            android:textAllCaps="false"
+                            android:layout_marginRight="@dimen/ten_dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/button_shape_blue"
+
+                            />
+                    </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_latest_men_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/home_background_color"
+                    android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    > <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/five_dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/ten_dp"
+                        android:text="@string/latest_products_womens"
+                        android:textAllCaps="true"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_weight="0.2"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btn_show_all_latest_products_women"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:minHeight="30dp"
+                        android:visibility="gone"
+                        android:text="@string/plus"
+                        android:padding="@dimen/five_dp"
+                        android:textAllCaps="false"
+                        android:textSize="11dp"
+                        android:layout_marginRight="@dimen/ten_dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_shape_blue"
+
+                        />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_latest_women_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/p_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

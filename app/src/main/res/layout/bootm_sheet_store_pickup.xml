@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:padding="@dimen/ten_dp"
+        android:text="@string/select_shipping_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        />
+    <RadioGroup
+        android:id="@+id/rg_shipping_method"
+        android:orientation="vertical"
+        android:padding="@dimen/ten_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+    </RadioGroup>
+</LinearLayout>

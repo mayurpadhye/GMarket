@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_address">
+<android.support.v7.widget.CardView
+    android:id="@+id/cv_update_address_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ten_dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/rb_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.1"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:textSize="16dp"
+                    android:text="Mayur Padhye"
+                    android:layout_toLeftOf="@+id/iv_menu"
+                    />
+                <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_menu_option"
+                    android:padding="7dp"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"></View>
+
+            <TextView
+                android:id="@+id/tv_street_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Karve Nagar"
+                />
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Pune"
+                />
+            <TextView
+                android:id="@+id/tv_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="444505"
+                />
+            <TextView
+                android:id="@+id/tv_state_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Maharashtra, Pune"
+                android:layout_marginBottom="@dimen/ten_dp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/ten_dp"
+                >
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="@dimen/fourty_dp"
+                    android:layout_height="@dimen/fourty_dp"
+                    android:src="@drawable/edit"
+                    android:padding="@dimen/five_dp"
+                    />
+                <ImageView
+                    android:layout_toRightOf="@+id/iv_edit"
+                    android:id="@+id/iv_delete"
+                    android:layout_width="@dimen/fourty_dp"
+                    android:layout_height="@dimen/fourty_dp"
+                    android:src="@drawable/delete_black"
+                    android:padding="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

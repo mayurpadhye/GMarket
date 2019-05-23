@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "854033549721",
+    "firebase_url": "https://gmarket-edaaf.firebaseio.com",
+    "project_id": "gmarket-edaaf",
+    "storage_bucket": "gmarket-edaaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854033549721:android:537d33572378d2ad",
+        "android_client_info": {
+          "package_name": "com.cube9.gmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854033549721-tkkb3t1lkg09ifqbgf43da6ei8s3pjkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDVB4DTPiQSjbfsgwh2-xTA2INouAJ2t0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

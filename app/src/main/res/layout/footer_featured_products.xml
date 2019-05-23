@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:gravity="center"
+
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="@string/featured_brands"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/featured_brand_slider"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/best_seller"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:padding="@dimen/ten_dp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_best_seller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/five_dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/latest_products_men"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:padding="@dimen/ten_dp"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_latest_men_products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/latest_products_womens"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:padding="@dimen/ten_dp"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_latest_women_products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

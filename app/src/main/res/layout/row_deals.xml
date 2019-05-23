@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+
+    app:cardUseCompatPadding="true"
+    android:minHeight="270dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/iv_product_image"
+                    android:layout_width="match_parent"
+
+                    android:layout_marginTop="3dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/seller_4"
+                    />
+
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="product Name"
+                android:textSize="14dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/ten_dp"
+
+                />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+
+
+
+                <TextView
+                    android:id="@+id/tv_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="75% OFF"
+                    android:textSize="12dp"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_discounted_pice"
+                android:layout_width="wrap_content"
+                android:layout_toLeftOf="@+id/tv_original_price"
+                android:text="FCFA 321"
+                android:layout_marginRight="@dimen/ten_dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/ten_dp"
+                android:textSize="12dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@+id/tv_discount"
+                android:text="200" />
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="false"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical"
+                android:isIndicator="true"
+                android:max="5"
+                android:layout_marginBottom="@dimen/five_dp"
+                android:numStars="5"
+                android:progressTint="#1c4f92"
+                android:rating="3.5"
+                android:stepSize="0.5"
+                android:transformPivotX="20dp"
+                android:transformPivotY="0dp" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_blue"
+                android:layout_marginTop="@dimen/five_dp"
+                android:minHeight="@dimen/twenty_dp"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:layout_marginLeft="@dimen/ten_dp">
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+
+                    android:textSize="@dimen/ten_dp"
+                    android:textColor="@color/white"
+                    android:text="4.4"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_toRightOf="@+id/tv_rating"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/star"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_no_cost_emi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten_dp"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:text="@string/no_cost_emi"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_above="@+id/ll_add_to_cart"
+        android:background="@color/gray"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:id="@+id/ll_add_to_cart"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/five_dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            >
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/spark_button"
+                android:layout_width="match_parent"
+
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                app:sparkbutton_activeImage="@drawable/like_red"
+                app:sparkbutton_iconSize="15dp"
+                app:sparkbutton_inActiveImage="@drawable/like"
+                app:sparkbutton_primaryColor="@color/red"
+                app:sparkbutton_secondaryColor="@color/purple" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+
+            >
+            <Button
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_to_cart"
+                android:textAllCaps="false"
+                android:background="@color/color_add_to_cart"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:textColor="@color/white"
+                android:gravity="center"
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

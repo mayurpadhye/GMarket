@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Orders.Activities.MyOrdersActivity">
+    <include layout="@layout/custom_cat_toolbar"
+        android:id="@+id/custom_tool"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_my_orders"
+        android:layout_below="@+id/custom_tool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+<TextView
+    android:id="@+id/tv_no_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:padding="@dimen/ten_dp"
+    android:textSize="16dp"
+    android:visibility="gone"
+    android:text="@string/no_items_found"
+    />
+    <ProgressBar
+        android:id="@+id/p_bar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_no_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:text="@string/no_order_found"
+            android:gravity="center"
+            android:padding="@dimen/five_dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            />
+        <Button
+            android:id="@+id/btn_start_shopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/five_dp"
+            android:text="@string/start_shopping"
+            android:background="@drawable/button_shape_blue"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:minHeight="@dimen/thirty_five_dp"
+
+            />
+
+    </LinearLayout>
+</RelativeLayout>

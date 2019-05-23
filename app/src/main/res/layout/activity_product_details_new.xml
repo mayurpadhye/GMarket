@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    tools:context=".Products.Activity.ProductDetailsNewActivity">
+    <include layout="@layout/custom_cat_toolbar"
+        android:id="@+id/tool"
+        />
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/tool"
+        android:visibility="gone"
+
+        android:orientation="vertical"
+        shimmer:duration="800">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+
+
+            >
+
+            <include layout="@layout/placeholder_product_details"></include>
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/tool"
+        >
+
+
+<RelativeLayout
+    android:id="@+id/rl_main"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/sv_product_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+
+        android:orientation="vertical"
+
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            tools:style="@style/CardView"
+            android:id="@+id/cardView1"
+            app:cardUseCompatPadding="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_products"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/one_seventy_dp"
+
+                        android:layout_marginBottom="@dimen/ten_dp"
+
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.varunest.sparkbutton.SparkButton
+                            android:id="@+id/spark_button"
+                            android:visibility="gone"
+                            android:layout_width="@dimen/fourty_dp"
+                            android:layout_height="@dimen/fourty_dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            app:sparkbutton_activeImage="@drawable/like_red"
+                            app:sparkbutton_iconSize="15dp"
+                            app:sparkbutton_inActiveImage="@drawable/like"
+                            app:sparkbutton_primaryColor="@color/red"
+                            app:sparkbutton_secondaryColor="@color/purple" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_product_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"></View>
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_product_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:text="Kesha Arogya Shampoo"
+                    android:textColor="@color/color_blue"
+                    android:textSize="18dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/tv_discounted_price"
+                        android:layout_width="wrap_content"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_product_name"
+
+                        android:layout_toRightOf="@+id/tv_actual_price"
+                        android:text="\u20B9 60"
+                        android:textColor="@color/text_color_rupees"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+                        android:id="@+id/tv_actual_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="\u20B9 132"
+                        android:textColor="@color/text_color_rupees"
+                        android:textSize="17dp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_actual_price"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:text="50% off"
+                        android:textColor="@color/text_color_discount"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"></View>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.4"
+        android:gravity="center_vertical"
+
+        >
+    <RelativeLayout
+        android:id="@+id/rl_rating"
+        android:layout_width="55dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_vertical"
+
+        android:layout_marginLeft="10dp"
+
+        android:background="@drawable/rounded_background"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@+id/tv_rating"
+            android:src="@drawable/star" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="3.5"
+            android:layout_marginStart="3dp"
+            android:textColor="@color/white"
+            tools:paddingStart="5dp" />
+    </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_all_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:text="1201 Reviews"
+            android:textColor="@color/color_blue"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray"></View>
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:padding="10dp"
+        android:layout_weight="0.8"
+        android:drawableLeft="@drawable/ic_share"
+        android:text="@string/share"
+        android:gravity="center"
+
+        android:textColor="@color/black"
+        />
+</LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            app:cardUseCompatPadding="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/size"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="6dp"
+                    android:padding="5dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:textSize="15dp"
+                    android:drawableStart="@drawable/ic_size_tag"
+                    />
+                <TextView
+                    android:id="@+id/tv_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:textColor="@color/text_color_rupees"
+                    android:text="Go in three sections. The first section covers basic syntax and data structures; the second discusses methods and interfaces; and the third introduces Go's concurrency primitives. Each section concludes with a few exercises so you can practice what you've learned. You can take the tour online or install it locally with"
+                    />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            app:cardUseCompatPadding="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/color"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="6dp"
+                    android:padding="5dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:textSize="15dp"
+                    android:drawableStart="@drawable/ic_pencile"
+                    />
+                <TextView
+                    android:id="@+id/tv_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:textColor="@color/text_color_rupees"
+                    android:text="Go in three sections. The first section covers basic syntax and data structures; the second discusses methods and interfaces; and the third introduces Go's concurrency primitives. Each section concludes with a few exercises so you can practice what you've learned. You can take the tour online or install it locally with"
+                    />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardUseCompatPadding="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/product_information"
+    android:textAllCaps="true"
+    android:layout_marginTop="6dp"
+    android:padding="5dp"
+    android:textColor="@color/color_blue"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    android:drawablePadding="10dp"
+    android:textSize="15dp"
+    android:drawableStart="@drawable/info"
+    />
+                <TextView
+                    android:id="@+id/tv_product_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="13dp"
+                    android:textColor="@color/text_color_rupees"
+                    android:text="Go in three sections. The first section covers basic syntax and data structures; the second discusses methods and interfaces; and the third introduces Go's concurrency primitives. Each section concludes with a few exercises so you can practice what you've learned. You can take the tour online or install it locally with"
+                    />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardUseCompatPadding="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ratings_and_review"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="6dp"
+                    android:padding="5dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:textSize="15dp"
+                    android:drawableStart="@drawable/rate_star"
+                    />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:isIndicator="true"
+                    android:max="5"
+
+                    android:layout_marginBottom="@dimen/five_dp"
+                    android:numStars="5"
+                    android:progressTint="#1c4f92"
+                    android:rating="3.5"
+                    android:stepSize="0.5"
+                    android:transformPivotX="20dp"
+                    android:transformPivotY="0dp" />
+    <TextView
+        android:id="@+id/tv_avg_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.5/5"
+        android:textColor="@color/colorAccent"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        />
+</RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_customer_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingBottom="60dp"
+            app:cardUseCompatPadding="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/customer_reviews"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="6dp"
+                    android:padding="5dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:textSize="15dp"
+                    android:drawableStart="@drawable/customer_review"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_margin="10dp"
+                    ></View>
+
+
+               <LinearLayout
+                   android:id="@+id/ll_review"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   ></LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:layout_marginBottom="60dp"
+            android:paddingBottom="60dp"
+            app:cardUseCompatPadding="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="10dp"
+                    android:textSize="15dp"
+                    android:text="@string/recommended_products"
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_recommended_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="55dp"
+                    ></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_cart_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        app:layout_anchorGravity="bottom|end"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_addtocart_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:text="@string/add_to_cart"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_buy_now"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@color/blue"
+                android:text="@string/buy_now"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_out_of_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@drawable/cell_shape"
+        android:text="@string/stock_out"
+        android:textColor="@color/red"
+        ></Button>
+</RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/p_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_white_back"
+        />
+
+</RelativeLayout>

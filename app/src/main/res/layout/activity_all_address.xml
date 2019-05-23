@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account.Activity.AllAddressActivity">
+    <include layout="@layout/custom_cat_toolbar"
+        android:id="@+id/cat_tool"/>
+   <RelativeLayout
+       android:id="@+id/rl_add_new_address"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/white"
+       android:layout_below="@+id/cat_tool">
+
+       <TextView
+           android:id="@+id/tv_add_new_address"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+           android:background="@color/white"
+           android:gravity="center"
+           android:padding="@dimen/five_dp"
+           android:drawableLeft="@drawable/ic_add"
+           android:text="@string/add_new_address"
+           android:textColor="@color/black"
+           android:drawablePadding="@dimen/ten_dp"
+
+           />
+   </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/rl_add_new_address"
+        android:id="@+id/rv_addresses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/sixty_dp"
+        />
+    <ProgressBar
+        android:id="@+id/p_bar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_no_address_found"
+        android:text="@string/no_address_found"
+        android:gravity="center"
+        android:padding="@dimen/ten_dp"
+        android:textSize="16dp"
+        android:visibility="gone"
+        android:textColor="@color/gray_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+
+    <Button
+        android:id="@+id/btn_deliver_to_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/blue"
+android:minHeight="@dimen/fourty_dp"
+        android:text="@string/deliver_to_this_address"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:drawablePadding="@dimen/ten_dp"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ten_dp"
+            android:text="Robert Reach"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ten_dp"
+            android:text="Flat No H-33, B Wing Viola,Warje,Pune "
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_pincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ten_dp"
+            android:text="444505"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_state_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ten_dp"
+            android:text=""
+            android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/btn_change_address"
+            android:layout_margin="@dimen/ten_dp"
+            android:minHeight="@dimen/thirty_five_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape_blue"
+            android:text="@string/change_address"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="@dimen/ten_dp"
+                android:text="@string/select_shipping_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                />
+            <RadioGroup
+                android:id="@+id/rg_shipping_method"
+                android:orientation="vertical"
+                android:padding="@dimen/ten_dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

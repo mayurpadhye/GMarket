@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:elevation="5dp"
+    android:layout_marginTop="7dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_cat_image"
+        android:layout_width="match_parent"
+        android:scaleX="2"
+        android:src="@drawable/seller_4"
+        android:layout_height="200dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#094a73"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/section_padding"
+            android:paddingBottom="@dimen/section_padding"
+            android:paddingStart="@dimen/section_text_padding_left"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:id="@+id/text_section"
+            android:layout_weight="0.12"/>
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggle_button_section"
+           android:padding="@dimen/section_padding"
+            android:textOn=""
+            android:visibility="gone"
+            android:textOff=""
+            android:layout_weight="0.88"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="5dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/five_dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell_shape">
+        <ImageView
+            android:id="@+id/iv_product_image"
+            android:layout_width="wrap_content"
+android:layout_centerInParent="true"
+            android:layout_height="@dimen/hundred_dp"
+            android:layout_margin="@dimen/five_dp"
+            android:src="@drawable/seller_4"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Belt"
+        android:maxLines="2"
+        android:minLines="2"
+        android:ems="3"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:padding="@dimen/five_dp"
+        />
+    <TextView
+        android:id="@+id/tv_shop_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shop_now"
+        android:textSize="12sp"
+        android:textColor="@color/blue"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:gravity="center"
+
+        android:layout_marginBottom="@dimen/ten_dp"
+        />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

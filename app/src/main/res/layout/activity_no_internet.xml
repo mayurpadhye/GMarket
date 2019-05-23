@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nointernet.NoInternetActivity">
+    <ImageView
+        android:id="@+id/iv_no_internet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/no_internet"
+        />
+<TextView
+    android:id="@+id/tv_no_internet_messgae"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/no_internet"
+    android:gravity="center"
+    android:paddingTop="@dimen/five_dp"
+    android:textColor="@color/black"
+    android:layout_below="@+id/iv_no_internet"
+    />
+    <Button
+        android:id="@+id/btn_no_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_no_internet_messgae"
+        android:layout_margin="@dimen/twenty_dp"
+        android:minHeight="@dimen/thirty_five_dp"
+        android:text="@string/retry"
+        android:textColor="@color/white"
+        android:background="@drawable/button_shape_blue"
+        />
+</RelativeLayout>

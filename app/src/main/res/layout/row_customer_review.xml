@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_toLeftOf="@+id/tv_created_on"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/ten_dp"
+            android:text="Awesome !!"
+            android:textColor="@color/color_blue" />
+        <TextView
+            android:id="@+id/tv_created_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/ten_dp"
+            android:text="13-08-18"
+
+            />
+    </RelativeLayout>
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:isIndicator="true"
+        android:max="5"
+
+        android:layout_marginBottom="@dimen/five_dp"
+        android:numStars="5"
+        android:progressTint="#1c4f92"
+        android:rating="3.5"
+        android:stepSize="0.5"
+        android:transformPivotX="20dp"
+        android:transformPivotY="0dp" />
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_created_on"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/ten_dp"
+        android:text="Mouli Banerjee"
+        android:textColor="@color/color_blue" />
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_created_on"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/ten_dp"
+        android:textSize="12dp"
+        android:text="Mouli Banerjee"
+         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        ></View>
+</LinearLayout>
+</RelativeLayout>
